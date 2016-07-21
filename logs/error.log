@@ -1,0 +1,13 @@
+EXCEPTION IN (/home/borislachev/PycharmProjects/Threaded Python Webserver/webserver.py, LINE 43 "response = judge.getjudgement().encode()"): Can't convert 'bytes' object to str implicitly
+EXCEPTION IN (/home/borislachev/PycharmProjects/Threaded Python Webserver/webserver.py, LINE 42 "judge = Judge(data.decode())"): __init__() missing 1 required positional argument: 'userrequest'
+EXCEPTION IN (/home/borislachev/PycharmProjects/Threaded Python Webserver/webserver.py, LINE 42 "judge = Judge(data.decode())"): __init__() missing 1 required positional argument: 'userrequest'
+EXCEPTION IN (/home/borislachev/PycharmProjects/Threaded Python Webserver/webserver.py, LINE 42 "judge = Judge(data.decode())"): __init__() missing 1 required positional argument: 'userrequest'
+EXCEPTION IN (/home/borislachev/PycharmProjects/Threaded Python Webserver/webserver.py, LINE 42 "judge = Judge(data.decode())"): __init__() missing 1 required positional argument: 'userrequest'
+EXCEPTION IN (/home/borislachev/PycharmProjects/Threaded Python Webserver/webserver.py, LINE 42 "judge = Judge(data.decode())"): __init__() missing 1 required positional argument: 'userrequest'
+EXCEPTION IN (/home/borislachev/PycharmProjects/Threaded Python Webserver/webserver.py, LINE 42 "judge = Judge(data.decode())"): __init__() missing 1 required positional argument: 'userrequest'
+EXCEPTION IN (/home/borislachev/PycharmProjects/Threaded Python Webserver/webserver.py, LINE 42 "judge = Judge(data.decode())"): __init__() missing 1 required positional argument: 'userrequest'
+EXCEPTION IN (/home/borislachev/PycharmProjects/Threaded Python Webserver/webserver.py, LINE 42 "judge = Judge(data.decode())"): __init__() missing 1 required positional argument: 'userrequest'
+EXCEPTION IN (/home/borislachev/PycharmProjects/Threaded Python Webserver/webserver.py, LINE 42 "judge = Judge(data.decode())"): __init__() missing 1 required positional argument: 'userrequest'
+EXCEPTION IN (/home/borislachev/PycharmProjects/Threaded Python Webserver/webserver.py, LINE 42 "judge = Judge(data.decode())"): __init__() missing 1 required positional argument: 'userrequest'
+EXCEPTION IN (/home/borislachev/PycharmProjects/Threaded Python Webserver/webserver.py, LINE 43 "judge.getjudgement()"): unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+EXCEPTION IN (/home/borislachev/PycharmProjects/Threaded Python Webserver/webserver.py, LINE 43 "judge.getjudgement()"): unsupported operand type(s) for +: 'NoneType' and 'NoneType'
