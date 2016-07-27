@@ -1,3 +1,5 @@
+from utils import logger
+
 __servername__ = 'PythonServer/1.0'
 
 
@@ -16,33 +18,51 @@ def getReferer(request):
     return referer
 
 
-def Send200Response(client, contenttype):
-    response = 'HTTP/1.0 200 OK\n'\
-               'Server: {0}\n'\
-               'Content-Type: {1}\n'\
-               '\r\n\r\n'.format(__servername__, contenttype).encode()
-    client.sendall(response)
-    return response
+def getcontentlenght(resource):
+    return len(resource)
 
 
-def Send404Response(client, contenttype):
-    response = 'HTTP/1.0 Not Found\n' \
-               'Server: {0}\n' \
-               'Content-Type: {1}\n' \
-               '\r\n\r\n'.format(__servername__, contenttype).encode()
-    client.sendall(response)
-    return response
+class ResponseCodes:
+    @staticmethod
+    def Send200Response(client, contenttype, content):
+        response = 'HTTP/1.0 200 OK\n'\
+                   'Server: {0}\n'\
+                   'Content-Type: {1}\n' \
+                   'Content-Length: {2}'\
+                   '\r\n\r\n'.format(__servername__, contenttype, len(content)).encode()
+        client.sendall(response)
+        logger.logaccess(response.decode())
+        return response
 
+    @staticmethod
+    def Send404Response(client, contenttype, content):
+        response = 'HTTP/1.0 404 Not Found\n' \
+                   'Server: {0}\n' \
+                   'Content-Type: {1}\n' \
+                   'Content-Length: {2}\n' \
+                   '\r\n\r\n'.format(__servername__, contenttype, len(content)).encode()
+        client.sendall(response)
+        logger.logaccess(response.decode())
+        return response
 
-def Send403Response(client, contenttype):
-    return client.sendall('HTTP/1.0 403 Forbidden\n'
-                          'Server: {0}\n'
-                          'Content-Type: {1}\n'
-                          '\r\n\r\n'.format(__servername__, contenttype).encode())
+    @staticmethod
+    def Send403Response(client, contenttype, content):
+        response = 'HTTP/1.0 403 Forbidden\n' \
+                              'Server: {0}\n' \
+                              'Content-Type: {1}\n' \
+                              'Content-Length: {2}\n' \
+                              '\r\n\r\n'.format(__servername__, contenttype, len(content)).encode()
+        client.sendall(response)
+        logger.logaccess(response.decode())
+        return response
 
-
-def Send500Response(client, contenttype):
-    client.sendall('HTTP/1.0 500 Internal Server Error\n'
-                   'Server: {0}\n'
-                   'Content-Type: {1}\n'
-                   '\r\n\r\n'.format(__servername__, contenttype).encode())
+    @staticmethod
+    def Send500Response(client, contenttype, content):
+        response = 'HTTP/1.0 500 Internal Server Error\n' \
+                       'Server: {0}\n' \
+                       'Content-Type: {1}\n' \
+                       'Content-Length: {2}\n' \
+                       '\r\n\r\n'.format(__servername__, contenttype, len(content)).encode()
+        client.sendall(response)
+        logger.logaccess(response.decode())
+        return response
